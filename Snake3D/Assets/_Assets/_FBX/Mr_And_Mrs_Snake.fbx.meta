@@ -3,7 +3,127 @@ guid: fb209108c79c31148b02e2ed39a1d67f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apple
+    second: {fileID: 2100000, guid: 953f3c6a7ac331a47be9d1a9e12c3e92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 02d0f5c5a4b14e44db4026f26df5cfec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cap_blue
+    second: {fileID: 2100000, guid: de3fceeef47cad74cb76230ce4912da5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cap_green
+    second: {fileID: 2100000, guid: 4ba826d164e3aaf4ab2636ee0ffb9ff6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cap_red
+    second: {fileID: 2100000, guid: fe477f5fec9188e4ab22fa73db642bfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cap_yellow
+    second: {fileID: 2100000, guid: 6796c727a6aea134f88fd9ddc525ba0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eye_BrightYellow
+    second: {fileID: 2100000, guid: 297d106d5e436894782213292a19ab5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grass.001
+    second: {fileID: 2100000, guid: 054d2422980baeb45b28ec6302fca84c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_ribbon_blue
+    second: {fileID: 2100000, guid: b2fe82cb2b9bf6b48a52f418598fc09a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_ribbon_green
+    second: {fileID: 2100000, guid: e0961f1102a9e104b9dac9f4ea5260ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_ribbon_pink
+    second: {fileID: 2100000, guid: a4bc46982649ce641a27a7cfaad94e83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair_ribbon_red
+    second: {fileID: 2100000, guid: 56771fce42b930b48a97da0462e17687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leave
+    second: {fileID: 2100000, guid: 4fc511ab35526954ea9728c8b7f8fe05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightBlue
+    second: {fileID: 2100000, guid: 40b7467fa4d3fb9468fbebb89c439cae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LightGreen
+    second: {fileID: 2100000, guid: 63f0f7e6fc8ce894b9deb8a12bdca64b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth_Blue
+    second: {fileID: 2100000, guid: ce89a578ee6ef2d4ea58d14cb17debe1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mouth_Green
+    second: {fileID: 2100000, guid: bf2fbdaaa8ea5ce4db55772feb14fbcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nose_Blue
+    second: {fileID: 2100000, guid: 1b86f9f424788094695e59657e65846e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nose_Green
+    second: {fileID: 2100000, guid: 986855a013914a340a88e1ff913c3770, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupil_Black
+    second: {fileID: 2100000, guid: 5625b5801b905d14bab36f63adfaea3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pupil_Brown
+    second: {fileID: 2100000, guid: b1b2d5b68123aa74186c84ddb772cc26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: 82643aa04d872af4d80206e2381c55a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tongue
+    second: {fileID: 2100000, guid: 8bb7c88dda072a048b06e13a260fad3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: cb5682f7ad8020946a1d8765ecad52c0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

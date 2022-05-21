@@ -47,18 +47,18 @@ public class LevelManager : MonoBehaviour {
         gridPosition = transform.position + gridSpawnPositionOffset;
         radomPoint = new Vector3(UnityEngine.Random.Range(-grid.x / 2,grid.x / 2f),0,UnityEngine.Random.Range(-grid.y / 2,grid.y / 2)) + gridPosition;
         if(Physics.Raycast(radomPoint,Vector3.down,out RaycastHit hit,2000f,hitMask,QueryTriggerInteraction.Collide)){
-            ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.Food,hit.point,Quaternion.identity);
+            ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.GravityLessFood,hit.point,Quaternion.identity);
         }else{
-            SpawnFoodOnSphericalWorld();
+            SpawnFoodOnFlatWorld();
         }
     }
     private void SpawnFoodOnSphericalWorld(){
         radomPoint = UnityEngine.Random.insideUnitSphere * spawnRadius;
         Vector3 checkDir = (planet.position - radomPoint).normalized;
         if(Physics.Raycast(radomPoint,checkDir,out RaycastHit hit,2000f,hitMask,QueryTriggerInteraction.Collide)){
-            ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.Food,hit.point,Quaternion.identity);
+            ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.GravityFood,hit.point,Quaternion.identity);
         }else{
-            SpawnFood();
+            SpawnFoodOnSphericalWorld();
         }
     }
 

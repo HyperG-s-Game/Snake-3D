@@ -8,7 +8,6 @@ public class Snake : MonoBehaviour {
     [SerializeField] private float movespeed;
     [SerializeField] private float steeringAngle;
     [SerializeField] private int gap = 10;
-    [SerializeField] private Transform bodyPrefab;
     [SerializeField] private float checkDistance;
     [SerializeField] private Vector3 checkViewOffset;
     [SerializeField] private LayerMask collisionCheckMask;
@@ -22,9 +21,6 @@ public class Snake : MonoBehaviour {
         playerInput = GetComponent<PlayerInput>();
     }
     private void Start(){
-        rb.useGravity = false;
-        rb.constraints = RigidbodyConstraints.FreezeRotation;
-
         bodyParts = new List<Transform>();
         positionHistory = new List<Vector3>();
         if(LevelManager.current.GetIsOnFlatWorld()){
@@ -53,7 +49,7 @@ public class Snake : MonoBehaviour {
 
     }
     private void CheckCollision(){
-        if(Physics.Raycast(transform.position + checkViewOffset,transform.forward,out RaycastHit hit,checkDistance,collisionCheckMask,QueryTriggerInteraction.Ignore)){
+        if(Physics.Raycast(transform.position + checkViewOffset,transform.forward,out RaycastHit hit,checkDistance,collisionCheckMask,QueryTriggerInteraction.Collide)){
             Debug.Log("Hit with " + hit.transform.name);
             if(hit.transform.TryGetComponent<Food>(out Food food)){
                 food.DestroyNow();

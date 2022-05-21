@@ -6,8 +6,9 @@ namespace GamerWolf.Utils{
 
     
     public enum PoolObjectTag{
-        BodyPart
-        ,Food,
+        BodyPart,
+        GravityFood,
+        GravityLessFood,
         // Other
         puddel_Fall_Effect,
         coin_Effect,
