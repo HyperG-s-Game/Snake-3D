@@ -9,6 +9,7 @@ public class Snake : MonoBehaviour {
     [SerializeField] private float steeringAngle;
     [SerializeField] private int gap = 10;
     [SerializeField] private float checkDistance;
+    [SerializeField] private float checkRadius;
     [SerializeField] private Vector3 checkViewOffset;
     [SerializeField] private LayerMask collisionCheckMask;
     private List<Transform> bodyParts = new List<Transform>();
@@ -49,33 +50,36 @@ public class Snake : MonoBehaviour {
 
     }
     private void CheckCollision(){
-        if(Physics.Raycast(transform.position + checkViewOffset,transform.forward,out RaycastHit hit,checkDistance,collisionCheckMask,QueryTriggerInteraction.Collide)){
-            Debug.Log("Hit with " + hit.transform.name);
-            if(hit.transform.TryGetComponent<Food>(out Food food)){
+        Collider[] colis = Physics.OverlapSphere(transform.position,checkRadius,collisionCheckMask,QueryTriggerInteraction.Collide);
+        for (int i = 0; i < colis.Length; i++){
+            if(colis[i].transform.TryGetComponent<Food>(out Food food)){
+                Debug.Log("Hit with " + colis[i].transform.name);
                 food.DestroyNow();
                 LevelManager.current.InvokeOnFoodEat();
                 GrowSnake();
             }else{
                 GameManagers.current.GameOver();
-            }
-        }
-    }
-
-    private void OnCollisionEnter(Collision coli){
-        if(coli.transform.TryGetComponent<Food>(out Food food)){
-            food.DestroyNow();
-            LevelManager.current.InvokeOnFoodEat();
-            GrowSnake();
-        }else{
-            if(!LevelManager.current.GetIsOnFlatWorld()){
-                GameManagers.current.GameOver();
 
             }
         }
     }
+
+    // private void OnCollisionEnter(Collision coli){
+    //     if(coli.transform.TryGetComponent<Food>(out Food food)){
+    //         food.DestroyNow();
+    //         LevelManager.current.InvokeOnFoodEat();
+    //         GrowSnake();
+    //     }else{
+    //         if(!LevelManager.current.GetIsOnFlatWorld()){
+    //             GameManagers.current.GameOver();
+
+    //         }
+    //     }
+    // }
     private void OnDrawGizmos(){
         Gizmos.color = Color.cyan;
         Gizmos.DrawRay(transform.position + checkViewOffset,transform.forward * checkDistance);
+        Gizmos.DrawWireSphere(transform.position ,checkRadius);
     }
     public void GrowSnake(){
         GameObject body = ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.BodyPart,transform.position,transform.rotation);
