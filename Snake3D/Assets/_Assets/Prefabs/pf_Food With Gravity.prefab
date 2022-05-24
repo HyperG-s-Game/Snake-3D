@@ -156,7 +156,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3345491829799792498}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: aa0b583e6f96c8c4abb0561d346fcc0b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -174,7 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35ed3d861fdde4db8b4432f09fd6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 20
+  spawnForce: 0
+  lifeTime: 10
+  foodType: 0
 --- !u!114 &-8604979156620799108
 MonoBehaviour:
   m_ObjectHideFlags: 0

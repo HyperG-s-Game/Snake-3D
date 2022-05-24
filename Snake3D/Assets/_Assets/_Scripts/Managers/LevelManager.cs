@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour {
 
     #region Events.............
 
-    public Action OnSnakeEatFood;
+    public Action OnFoodDestroyed;
 
     #endregion
 
@@ -33,7 +33,10 @@ public class LevelManager : MonoBehaviour {
         current = this;
     }
     private void Start(){
-        OnSnakeEatFood += SpawnFood;
+        OnFoodDestroyed += () =>{
+            Debug.Log("Spawning Food");
+            SpawnFood();
+        };
     }
     
     public void SpawnFood(){
@@ -62,9 +65,10 @@ public class LevelManager : MonoBehaviour {
         }
     }
 
-    public void InvokeOnFoodEat(){
-        OnSnakeEatFood?.Invoke();
+    public void InvokeOnFoodDistroyed(){
+        OnFoodDestroyed?.Invoke();
     }
+    
 
     public bool GetIsOnFlatWorld(){
         return onFlatWorld;

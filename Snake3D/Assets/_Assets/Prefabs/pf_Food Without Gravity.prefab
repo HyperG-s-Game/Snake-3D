@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &149940319722955436
 Transform:
@@ -42,13 +42,13 @@ GameObject:
   - component: {fileID: 7969083261963861218}
   - component: {fileID: 5206595058558576274}
   - component: {fileID: 5351355459062601469}
-  - component: {fileID: -958104862093316457}
+  - component: {fileID: -6181813893904657780}
   m_Layer: 10
   m_Name: pf_Food Without Gravity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7969083261963861218
 Transform:
@@ -72,7 +72,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3345491829799792498}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: aa0b583e6f96c8c4abb0561d346fcc0b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -90,8 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a35ed3d861fdde4db8b4432f09fd6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 20
---- !u!54 &-958104862093316457
+  spawnForce: 5
+  lifeTime: 10
+  foodType: 1
+--- !u!54 &-6181813893904657780
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,7 +108,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!1 &3355398344347545753
 GameObject:
   m_ObjectHideFlags: 0

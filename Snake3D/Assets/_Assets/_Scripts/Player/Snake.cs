@@ -11,7 +11,7 @@ public class Snake : MonoBehaviour {
     [SerializeField] private float checkDistance;
     [SerializeField] private float checkRadius;
     [SerializeField] private Vector3 checkViewOffset;
-    [SerializeField] private LayerMask collisionCheckMask;
+    [SerializeField] private LayerMask collisionCheckMask,bodyLayer;
     private List<Transform> bodyParts = new List<Transform>();
     private List<Vector3> positionHistory  = new List<Vector3>();
     private PlayerInput playerInput;
@@ -29,6 +29,7 @@ public class Snake : MonoBehaviour {
         }else{
             rb.isKinematic = false;
         }
+        
     }
     private void Update(){
         
@@ -37,11 +38,11 @@ public class Snake : MonoBehaviour {
             steeringDirection = playerInput.Horizontal;
             transform.Rotate(Vector3.up * steeringAngle * steeringDirection * Time.deltaTime);
         }
-        positionHistory.Insert(0,transform.position);
         int index = 0;
+        positionHistory.Insert(0,transform.position);
         foreach(var body in bodyParts){
             Vector3 point = positionHistory[Mathf.Min(index * gap,positionHistory.Count - 1)];
-            Vector3 moveDir = point - body.position;
+            Vector3 moveDir = (point - body.position).normalized;
             body.position += moveDir * bodyMoveSpeed * Time.deltaTime;
             body.transform.LookAt(point);
             index++;
@@ -55,32 +56,25 @@ public class Snake : MonoBehaviour {
             if(colis[i].transform.TryGetComponent<Food>(out Food food)){
                 Debug.Log("Hit with " + colis[i].transform.name);
                 food.DestroyNow();
-                LevelManager.current.InvokeOnFoodEat();
+                GameManagers.current.IncraseFoodAmount();
                 GrowSnake();
             }else{
                 GameManagers.current.GameOver();
 
             }
         }
+        if(Physics.Raycast(transform.position + checkViewOffset,transform.forward,out RaycastHit hit,checkDistance,bodyLayer)){
+            if(hit.transform.TryGetComponent<BodyPart>(out BodyPart body)){
+                GameManagers.current.GameOver();
+            }
+        }
     }
-
-    // private void OnCollisionEnter(Collision coli){
-    //     if(coli.transform.TryGetComponent<Food>(out Food food)){
-    //         food.DestroyNow();
-    //         LevelManager.current.InvokeOnFoodEat();
-    //         GrowSnake();
-    //     }else{
-    //         if(!LevelManager.current.GetIsOnFlatWorld()){
-    //             GameManagers.current.GameOver();
-
-    //         }
-    //     }
-    // }
     private void OnDrawGizmos(){
         Gizmos.color = Color.cyan;
         Gizmos.DrawRay(transform.position + checkViewOffset,transform.forward * checkDistance);
         Gizmos.DrawWireSphere(transform.position ,checkRadius);
     }
+    [ContextMenu("GrownSnake")]
     public void GrowSnake(){
         GameObject body = ObjectPoolingManager.current.SpawnFromPool(PoolObjectTag.BodyPart,transform.position,transform.rotation);
         bodyParts.Add(body.transform);
