@@ -6,20 +6,23 @@ ScriptsOnlyBuild:
     - Food
     - GameManagers
     - GamerWolf.Utils.ObjectPoolingManager
+    - GamerWolf.Utils.SetUiSafeArea
     - GravityAttractor
     - GravityBody
+    - LevelDataSO
     - LevelManager
     - PlayerInput
     - Snake
+    - UiManager
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
-    Unity.ProBuilder.Editor.dll:
-    - UnityEditor.ProBuilder.EditorToolbar
-    - UnityEditor.ProBuilder.ProBuilderEditor
+    Unity.DeviceSimulator.Editor.dll:
+    - UnityEditor.DeviceSimulation.DeviceInfoAsset
+    - UnityEditor.DeviceSimulation.SimulatorWindow
     Unity.RenderPipelines.Core.Runtime.dll:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -141,129 +144,135 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 1816}
+      Script: {instanceID: 1820}
     - Class: 114
-      Script: {instanceID: 2244}
+      Script: {instanceID: 2262}
     - Class: 114
-      Script: {instanceID: 2396}
+      Script: {instanceID: 2422}
     - Class: 114
-      Script: {instanceID: 2482}
+      Script: {instanceID: 2510}
     - Class: 114
-      Script: {instanceID: 2626}
+      Script: {instanceID: 2656}
     - Class: 114
-      Script: {instanceID: 2694}
+      Script: {instanceID: 2724}
     - Class: 114
-      Script: {instanceID: 2760}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3072}
     - Class: 114
-      Script: {instanceID: 3250}
+      Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 3330}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3394}
+      Script: {instanceID: 3378}
     - Class: 114
-      Script: {instanceID: 3510}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 3628}
+      Script: {instanceID: 3562}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 3680}
     - Class: 114
-      Script: {instanceID: 4030}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4072}
+      Script: {instanceID: 4090}
     - Class: 114
-      Script: {instanceID: 4156}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 4188}
+      Script: {instanceID: 4218}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4250}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 4392}
     - Class: 114
-      Script: {instanceID: 4574}
+      Script: {instanceID: 4488}
     - Class: 114
-      Script: {instanceID: 4774}
+      Script: {instanceID: 4650}
     - Class: 114
-      Script: {instanceID: 4810}
+      Script: {instanceID: 4854}
     - Class: 114
-      Script: {instanceID: 4938}
+      Script: {instanceID: 4890}
     - Class: 114
-      Script: {instanceID: 5058}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5132}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 5150}
+      Script: {instanceID: 5214}
     - Class: 114
-      Script: {instanceID: 5194}
+      Script: {instanceID: 5232}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5276}
     - Class: 114
-      Script: {instanceID: 5392}
+      Script: {instanceID: 5282}
     - Class: 114
-      Script: {instanceID: 5394}
+      Script: {instanceID: 5342}
     - Class: 114
-      Script: {instanceID: 5414}
+      Script: {instanceID: 5482}
     - Class: 114
-      Script: {instanceID: 5672}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5708}
+      Script: {instanceID: 5504}
     - Class: 114
-      Script: {instanceID: 5760}
+      Script: {instanceID: 5764}
     - Class: 114
-      Script: {instanceID: 5800}
+      Script: {instanceID: 5802}
     - Class: 114
-      Script: {instanceID: 5936}
+      Script: {instanceID: 5856}
     - Class: 114
-      Script: {instanceID: 5946}
+      Script: {instanceID: 5896}
     - Class: 114
-      Script: {instanceID: 5956}
+      Script: {instanceID: 6036}
     - Class: 114
-      Script: {instanceID: 6014}
+      Script: {instanceID: 6046}
     - Class: 114
-      Script: {instanceID: 6020}
+      Script: {instanceID: 6056}
     - Class: 114
-      Script: {instanceID: 6108}
+      Script: {instanceID: 6094}
     - Class: 114
-      Script: {instanceID: 6144}
+      Script: {instanceID: 6122}
     - Class: 114
-      Script: {instanceID: 6188}
+      Script: {instanceID: 6128}
     - Class: 114
-      Script: {instanceID: 6264}
+      Script: {instanceID: 6220}
     - Class: 114
-      Script: {instanceID: 6274}
+      Script: {instanceID: 6256}
     - Class: 114
-      Script: {instanceID: 6386}
+      Script: {instanceID: 6302}
     - Class: 114
-      Script: {instanceID: 6530}
+      Script: {instanceID: 6378}
     - Class: 114
-      Script: {instanceID: 6534}
+      Script: {instanceID: 6388}
     - Class: 114
-      Script: {instanceID: 6648}
+      Script: {instanceID: 6504}
     - Class: 114
-      Script: {instanceID: 6698}
+      Script: {instanceID: 6652}
     - Class: 114
-      Script: {instanceID: 6938}
+      Script: {instanceID: 6656}
     - Class: 114
-      Script: {instanceID: 6982}
+      Script: {instanceID: 6772}
     - Class: 114
-      Script: {instanceID: 7040}
+      Script: {instanceID: 6822}
     - Class: 114
-      Script: {instanceID: 7332}
+      Script: {instanceID: 7064}
     - Class: 114
-      Script: {instanceID: 7588}
+      Script: {instanceID: 7110}
     - Class: 114
-      Script: {instanceID: 7644}
+      Script: {instanceID: 7168}
     - Class: 114
-      Script: {instanceID: 7782}
+      Script: {instanceID: 7462}
     - Class: 114
-      Script: {instanceID: 7880}
+      Script: {instanceID: 7724}
     - Class: 114
-      Script: {instanceID: 7964}
+      Script: {instanceID: 7780}
+    - Class: 114
+      Script: {instanceID: 7928}
+    - Class: 114
+      Script: {instanceID: 8026}
+    - Class: 114
+      Script: {instanceID: 8120}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -537,7 +546,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 010ad63ee1cfbf91ec3640e9a124e2dc
+      Hash: 6cd7e327122e548ee6c2d0b7510d14ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Snake
@@ -583,6 +592,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: Cinemachine3rdPersonFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 4582ac58dd3e9aa608f2b182bfd84ba1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UiManager
   - hash:
       serializedVersion: 2
       Hash: 2cfa0393b5123bd14aa7b550fd8912e4
@@ -759,7 +774,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 063b7550d057ce87fc5f8449506e7577
+      Hash: 980e84ae964e420950e37c8c1df09c0e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManagers
@@ -1053,6 +1068,12 @@ ScriptsOnlyBuild:
     className: ChannelMixer
   - hash:
       serializedVersion: 2
+      Hash: d62ccfc91b98dbbe70497a44f4ae0504
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelDataSO
+  - hash:
+      serializedVersion: 2
       Hash: 8d35f16c5022311c6f4d9432be73bfcf
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -1183,6 +1204,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: GamerWolf.Utils
     className: ObjectPoolingManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GamerWolf.Utils
+    className: SetUiSafeArea
   - hash:
       serializedVersion: 2
       Hash: 1f0602e7bad1e0a9cba31ce292eee8bb
@@ -1479,7 +1506,7 @@ ScriptsOnlyBuild:
     className: PaniniProjection
   - hash:
       serializedVersion: 2
-      Hash: bb8814741d7085ebb3d19a1a11769619
+      Hash: a4297c0cf124a520923747ebe260eeec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Food
@@ -1558,4 +1585,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity Builds/Snake3D/S3D T_1.apk
+  playerPath: D:/Unity Builds/Snake3D/S3D T_2.apk

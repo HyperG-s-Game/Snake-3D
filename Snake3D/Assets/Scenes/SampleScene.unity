@@ -4266,7 +4266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableInput: 0
-  onPc: 1
+  onPc: 0
   joystick: {fileID: 713640381}
 --- !u!54 &1399452744
 Rigidbody:
@@ -6152,7 +6152,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.5064205, y: 0.000000022255252, z: -0.0000000130705, w: 0.8622867}
+  m_LocalRotation: {x: 0.5064205, y: -0.000000022255241, z: 0.000000013070493, w: 0.8622867}
   m_LocalPosition: {x: 0, y: 32.008, z: -17.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -6251,7 +6251,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719042866}
-  m_LocalRotation: {x: 0.5064205, y: 0.000000022255252, z: -0.0000000130705, w: 0.8622867}
+  m_LocalRotation: {x: 0.5064205, y: -0.000000022255241, z: 0.000000013070493, w: 0.8622867}
   m_LocalPosition: {x: 0, y: 32.008, z: -17.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
