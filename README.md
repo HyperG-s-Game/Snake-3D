@@ -1,2 +1,2 @@
 # Snake 3D
- Making the Snake Game
+ Classic Snake Game In 3D for Mobile devices
